@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PRUEBA</title>
+  </head>
+  <body>
+    <div id="app">
+      Descripcion: {{descripcion}} <br />
+      Precio: $<input type="number" name="precio" v-model="precio" /> <br />
+      Cantidad: <input type="number" name="cantidad" v-model="cantidad" />
+      <hr />
+      Total: {{total}} <br />
+      <p v-if="total > 500">Te estas pasando de rosca con lo gastado</p>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.7.4/dist/vue.js"></script>
+    <script>
+      var app = new Vue({
+        el: "#app",
+        data: {
+          descripcion: "botella de agua",
+          precio: 150,
+          cantidad: 2,
+        },
+        computed: {
+          total() {
+            return this.precio * this.cantidad;
+          },
+        },
+      });
+    </script>
+  </body>
+</html>

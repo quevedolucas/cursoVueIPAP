@@ -1,8 +1,8 @@
 <template>
   <nav class="navbar navbar-light bg-light">
     <div class="container-fluid">
-      <router-link to="/">ecommerce</router-link>
-      <div class="d-flex">
+      <router-link to="/">Sistema de usuarios y posts</router-link>
+      <!-- <div class="d-flex">
         <input
           v-model="busqueda"
           class="form-control me-2"
@@ -24,16 +24,17 @@
           type="button"
           class="btn btn-secondary btn-sm me-2"
         >
-          <i class="bi bi-heart-fill"></i> {{ cantidadFavoritos }}
+          <i class="bi bi-heart-fill">Favoritos</i> {{ cantidadFavoritos }}
         </button>
         <button
           @click="$router.push('/carrito')"
           type="button"
           class="btn btn-secondary btn-sm"
         >
-          <i class="bi bi-cart-fill"></i> {{ cantidadProductosCarrito }}
+          <i class="bi bi-cart-fill">Cant. Productos</i>
+          {{ cantidadProductosCarrito }}
         </button>
-      </div>
+      </div> -->
     </div>
   </nav>
 </template>
