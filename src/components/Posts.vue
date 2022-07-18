@@ -17,10 +17,7 @@
 <script>
 export default {
   name: "PostsUsuario",
-  props: {
-    idUser: Number,
-    nombreUser: String,
-  },
+  props: ["idUser", "nombreUser"],
   data() {
     return {
       posts: null,
@@ -30,11 +27,9 @@ export default {
   },
   mounted() {
     this.$http
-      .get(
-        `https://jsonplaceholder.typicode.com/users/` + this.idUser + `/posts`
-      )
+      .get(`https://jsonplaceholder.typicode.com/users/${this.idUser}/posts`)
       .then((response) => {
-        this.usuarios = response.data;
+        this.posts = response.data;
       })
       .catch((error) => {
         console.log(error);

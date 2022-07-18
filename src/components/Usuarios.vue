@@ -6,7 +6,7 @@
         <router-link
           :to="{
             name: 'posts',
-            params: { idUser: us.id, nombreUser: us.nombre },
+            params: { idUser: us.id, nombreUser: us.name },
           }"
           >{{ us.name }}</router-link
         >
