@@ -3,7 +3,7 @@
     <img alt="logo" src="../assets/imgEncabezado.png" />
     <div>
       <h2 class="text-center">
-        <router-link to="/users">LISTADO DE USUARIOS</router-link>
+        Acceder al <router-link to="/users">LISTADO DE USUARIOS</router-link>
       </h2>
     </div>
   </div>
