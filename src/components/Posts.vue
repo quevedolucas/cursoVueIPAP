@@ -1,13 +1,13 @@
 <template>
   <div class="container">
     Posts del usuario
-    <h3>{{ nombreUser }}</h3>
+    <h2>{{ nombreUser }}</h2>
     <hr />
     <ul id="posts">
-      <li v-for="post in posts" :key="post.id">
-        ID Post: {{ post.id }} <br />
-        Tittle: {{ post.tittle }} <br />
-        Body: {{ post.body }} <br />
+      <li v-for="post in posts" :key="post.id" style="list-style-type: none">
+        <strong>ID Post:</strong> {{ post.id }} <br />
+        <strong>Título:</strong> {{ post.title }} <br />
+        <strong>Cuerpo:</strong> {{ post.body }} <br />
         <hr />
       </li>
     </ul>

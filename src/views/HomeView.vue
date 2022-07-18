@@ -1,8 +1,10 @@
 <template>
   <div class="home">
-    <img alt="logo" src="../assets/logoUsers2.png" />
+    <img alt="logo" src="../assets/imgEncabezado.png" />
     <div>
-      <h2><router-link to="/users">LISTADO DE USUARIOS</router-link></h2>
+      <h2 class="text-center">
+        <router-link to="/users">LISTADO DE USUARIOS</router-link>
+      </h2>
     </div>
   </div>
 </template>

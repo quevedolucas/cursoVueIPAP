@@ -2,14 +2,22 @@
   <div class="container">
     <h1>Listado de Usuarios</h1>
     <ul id="usuarios">
-      <li v-for="us in usuarios" :key="us.id">
+      <li v-for="us in usuarios" :key="us.id" style="list-style-type: none">
+        <hr />
         <router-link
           :to="{
             name: 'posts',
             params: { idUser: us.id, nombreUser: us.name },
           }"
-          >{{ us.name }}</router-link
+          ><h3>{{ us.name }}</h3></router-link
         >
+        <strong>Username:</strong> {{ us.username }} <br />
+        <strong>Email:</strong> {{ us.email }} <br />
+        <strong>Dirección:</strong> {{ us.address.street }},
+        {{ us.address.suite }} ({{ us.address.city }}) <br />
+        <strong>Teléfono:</strong> {{ us.phone }} <br />
+        <strong>Website:</strong> {{ us.website }} <br />
+        <hr />
       </li>
     </ul>
   </div>
